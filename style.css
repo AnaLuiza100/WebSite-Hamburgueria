@@ -22,7 +22,7 @@ html{
     position: relative;
 }
 
-#img-hd {
+#img-header {
     display: block;
     width: 100%;
     height: auto;
@@ -491,11 +491,11 @@ footer {
         padding: 0;
     }
 
-    #img-hd{
+    #img-header{
         display: none;
     }
 
-    #img-hd-mb{
+    #img-mobile{
         display: block;
         width: 100%;
         height: auto;
