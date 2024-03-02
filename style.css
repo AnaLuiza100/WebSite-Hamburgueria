@@ -1,9 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Protest+Riot&display=swap');
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Protest+Riot&display=swap');
-
 *, :root{
     margin: 0;
     padding: 0;
@@ -21,58 +18,76 @@ html{
     scroll-behavior: smooth;
 }
 
-#hd {
+#header {
     position: relative;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    justify-content: space-between;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
-#img-header {
-    display: block;
+#img-hd {
     width: 100%;
     height: auto;
 }
 
-#mobile{
+#btn-mobile {
     display: none;
 }
 
-#hd-menu {
-    position: absolute;
-    top: 15px;
-    left: 0;
-    right: 0;
-    padding: 15px;
-    gap: 15px;
+#menu{
     display: flex;
-    justify-content: flex-end;
+    list-style: none;
+    gap: .5rem;
+}
+
+#nav {
+    position: absolute;
+    right: 0;
+    padding: 1.5rem;
+}
+
+#menu .hd-item{
+    display: block;
 }
 
 #img-logo {
     position: absolute;
     top: 20px;
     left: 80px;
-    width: 200px; /* Defina a largura da logo conforme necessário */
-    height: auto;
+    width: 17%;
 }
 
+#logo-mobile{
+    display: none;
+}
+
+#menu-lateral{
+    display: none;
+}
 
 .hd-item {
     font-size: 20px;
-    margin-left: 20px; /* Adicione espaço entre os itens do menu */
+    margin-left: 20px;
     text-decoration: none;
-    color: rgb(255, 255, 255); /* Defina a cor do texto do menu */
+    color: rgb(255, 255, 255);
 }
 
-.hd-item:hover{
+.hd-item:hover {
     font-weight: 600;
+    color: white;
 }
 
-.hd-menu-btn{
-    position: absolute; /* Posiciona o botão de forma absoluta */
-    top: 530px; /* Define a distância do topo */
-    left: 90px; /* Define a distância da esquerda */
+.hd-menu-btn {
+    position: absolute;
+    top: 540px;
+    left: -940px;
 }
 
-.hd-menu-btn button{
+.hd-menu-btn button {
     background-color: white;
     color: #250902;
     width: 180px;
@@ -83,7 +98,7 @@ html{
     font-weight: 800;
 }
 
-.hd-menu-btn button:hover{
+.hd-menu-btn button:hover {
     color: white;
     background-color: #250902;
 }
@@ -96,7 +111,11 @@ html{
     display: none;
 }
 
-.title-menu{
+.wrapper{
+    display: none;
+}
+
+.title-menu {
     font-family: "Protest Riot", sans-serif;
     text-align: center;
     color: #250902;
@@ -110,8 +129,8 @@ html{
     align-items: center;
     justify-content: flex-start;
     height: 80vh;
-    row-gap: 50px;
 }
+
 
 .cont-item {
     margin-top: 50px;
@@ -124,7 +143,7 @@ html{
 .square {
     border-radius: 15px;
     width: 140px;
-    height: 175px;
+    height: 190px;
     background-color: #250902;
 }
 
@@ -159,7 +178,7 @@ html{
     display: flex;
     justify-content: center;
     margin-top: 8px;
-    margin-left: 12px;
+    margin-left: 16px;
 }
 
 .img-oclock-sh{
@@ -206,8 +225,6 @@ html{
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    height: 190vh;
-    row-gap: 50px;
 }
 
 #title-about {
@@ -236,6 +253,14 @@ html{
     padding: 20px;
 }
 
+.text-about-mobile{
+    display: none;
+}
+
+.img-mobile-about{
+    display: none;
+}
+
 .comment {
     margin-top: 50px;
     margin-left: 35vh;
@@ -249,7 +274,7 @@ html{
     margin-top: -30px;
     border-radius: 15px;
     width: 195px;
-    height: 205px;
+    height: 220px;
     background-color: white;
 }
 
@@ -300,7 +325,7 @@ section{
     height: auto; /* Mantenha a proporção da imagem */
 }
 
-section form{
+#service section form{
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -336,7 +361,7 @@ form textarea{
 form textarea:focus{
     border-radius: 16px;
 }
-form button{
+#service form button{
     padding: 15px;
     cursor: pointer;
     font-size: 16px;
@@ -345,7 +370,7 @@ form button{
     background-color: #fffdfd;
     color: #250902;
 }
-form button:hover{
+#service form button:hover{
     border-radius: 16px;
 }
 
@@ -353,13 +378,18 @@ hr {
     width: 80%; /* Defina a largura da linha */
     margin: 0 auto; /* Centraliza a linha horizontalmente */
     border: none; /* Remove a borda padrão */
-    border-top: 1px solid #ccc; /* Adiciona uma borda superior com cor cinza */
+    border-top: 1px solid white; 
 }
 
 .maps{
     display: flex;
     margin-top: 4.5rem;
 }
+
+.comment-service-mobile{
+    display: none;
+}
+
 
 footer {
     width: 100%;
@@ -486,246 +516,258 @@ footer {
     color: white;
 } 
 
-@media screen and (max-width: 768px) {
-
-    body{
-        margin: 0;
-        padding: 0;
-    }
-
-    #img-header{
+@media screen and (max-width: 800px) {
+    #img-hd {
         display: none;
     }
-
-    #mobile{
+    #img-logo {
         display: block;
-        width: 100%;
-        height: auto;
+        width: 6.5rem;
+        margin: -10px;
     }
 
-    #hd{
+    #header{
+        height: 70px;
+        background: #250902;
+    }
+
+    #btn-mobile {
+        display: flex;
+        font-size: 1rem;
+        border: none;
+        background: none;
+        cursor: pointer;
+        gap: 0.5rem;
+        color: #e7e7e7;
+    }
+
+    #menu {
+        display: block;
+        position: absolute;
+        width: 200%;
+        top: 70px;
+        right: 0px;
+        background: #250902;
+        transition: 0.6s;
+        z-index: 1000;
+        height: 0px;
+        visibility: hidden;
+        overflow-y: hidden;
+    }
+
+    #nav.active #menu {
+        height: calc(50vh - 70px);
+        visibility: visible;
+        overflow-y: auto;
+    }
+
+    #menu a {
+        padding: 1rem 0;
+        margin: 0 1rem;
+        border-bottom: 2px solid rgba(0, 0, 0, 0.05);
+    }
+
+    #hamburger {
+        border-top: 2px solid;
+        width: 20px;
+    }
+
+    #hamburger::after,
+    #hamburger::before {
+        content: '';
+        display: block;
+        width: 20px;
+        height: 2px;
+        background: currentColor;
+        margin-top: 5px;
+        transition: 0.3s;
         position: relative;
     }
 
-    #img-logo{
+    #nav.active #hamburger {
+        border-top-color: transparent;
+    }
+
+    #nav.active #hamburger::before {
+        transform: rotate(135deg);
+    }
+
+    #nav.active #hamburger::after {
+        transform: rotate(-135deg);
+        top: -7px;
+    }
+
+    #container{
         display: none;
     }
-    .hd-item {
-        display: none;
-    }
 
-    .mb-item{
-        color: black;
-    }
-
-    .hd-menu-btn {
-        top: 22vh;
-        left: 32px;
-    }
-
-    .hd-menu-btn button {
-        width: 76px;
-        height: 27px;
-        font-size: 10px;
-        border-radius: 10px;
-    }
-    
-    #icon{
-        color: white;
-        padding: 20px;
-        margin-top: -5vh;
-    }
-
-    .mobile-menu-icon {
+    .wrapper {
         display: block;
-    }
-    .mobile-menu-icon button {
-        background-color: transparent;
-        border: none;
-        cursor: pointer;
-    }
-    .mobile-menu ul {
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-        padding-bottom: 1rem;
-    }
-    .mobile-menu .hd-item {
-        display: block;
-        padding-top: 1.2rem;
+        max-width: 1100px;
+        width: 100%;
+        position: relative;
+        padding: 35px;
     }
 
-    .open {
-        background-color: #250902;
+    .wrapper .carousel {
         display: grid;
-        opacity: 45px;
-        width: 22vh;
-        position: absolute;
-        box-shadow: gray, 50.1;
-        border-radius: 9px;
-        box-shadow: 4px 5px 4px rgb(0, 0, 0, 0.25);
-        left: 30vh;
-        height: 15vh;
-        top: 8vh;
-        align-content: space-around;
-    }
+        grid-auto-flow: column;
+        grid-auto-columns: calc((100% / 2) - 1px);
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        gap: 16px;
+        border-radius: 8px;
+        scroll-behavior: smooth;
+        scrollbar-width: none;
+        }
 
-    .mb-item {
-        color: white;
-        font-size: 15px;
-        display: grid;
-        text-align: center;
-    }
+        .carousel::-webkit-scrollbar {
+            display: none;
+        }
+        .carousel.no-transition {
+            scroll-behavior: auto;
+        }
+        .carousel.dragging {
+            scroll-snap-type: none;
+            scroll-behavior: auto;
+        }
+        .carousel.dragging .card {
+            cursor: grab;
+            user-select: none;
+        }
+        .carousel :where(.card, .img) {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .carousel .card {
+            scroll-snap-align: start;
+            height: 342px;
+            list-style: none;
+            background: #250902;
+            cursor: pointer;
+            padding-bottom: 15px;
+            flex-direction: column;
+            border-radius: 8px;
+        }
+        .card .img img {
+            width: 140px;
+            height: 140px;
+            object-fit: cover;
+        }
+        .card .img .burguer-modific {
+            width: 180px;
+            height: 140px;
+            object-fit: cover;
+        }
 
-    #container {
-        display: grid;
-        align-items: center;
-        justify-content: center;
-        height: 150vh;
-        flex-wrap: wrap;
-    }
+        .carousel .card h2 {
+            font-weight: 500;
+            font-size: 1.56rem;
+            margin: 30px 0 5px;
+            color: #e7e7e7;
+        }
+        .carousel .card span {
+            color: white;
+            font-size: 1.31rem;
+        }
 
-    .cont-item {
-        display: grid;
-        margin-top: 20px;
-        justify-content: center;
-        width: 80%;
-        gap: 25px;
-        margin-left: 30px;
-    }
-
-    #cont-item-2{
-        margin-top: -10vh;
-    }
-
-    .square {
-        border-radius: 15px;
-        width: 295px;
-        height: 95px;
-    }
-
-    .img-cheese {
-        height: 85px;
-    }
-
-    .img-double {
-        height: 78px;
-    }
-
-    .img-fish {
-        height: 71px;
-    }
-
-    .img-smash {
-        height: 76px;
-    }
-
-    .img-oclock-sh {
-        margin-left: 14px;
-    }
+        .img-about{
+            display: none;
+        }
 
 
-    .title-name-cheese {
-        margin-top: -60px;
-        margin-left: 110px;
-    }
+        .text-about{
+             display: none;
+        }
 
-    .title-name-standard {
-        margin-top: -60px;
-        margin-left: 102px;
-    }
+        .text-about-mobile{
+            display: block;
+            padding: 10%;
+            font-size: 15px;
+            margin-top: 0;
+            margin-left: 0; 
+            color: #fffdfd;
+            text-indent: 30px;
+            justify-content: center;
+        }
 
-    #title-name-standard-mb{
-        margin-top: -70px;
-        margin-left: 102px;
-    }
+        .img-mobile-about{
+            display: block;
+            width: 80%;
+            padding: 3%;
+        }
 
-    .title-name-fish {
-        margin-top: -55px;
-        margin-left: 105px;
-    }
+        .comment{
+            display: none;
+        }
 
-    .cheap {
-        margin-top: 20px;
-        margin-left: 180px;
-    }
+        #service{
+            display: none;
+        }
 
-    #about{
-        height: 200vh;
-    }
+        .maps{
+            display: none;
+        }
 
-    #title-about{
-        font-size: 20px;
-    }
+        .comment-service-mobile{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+        }
 
-    .text-about{
-        font-size: 12px;
-        justify-content: center;
-        margin-top: -590px;
-        margin-left: 20px;
-    }
+        .comment-mb {
+            /* top: 5%; */
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            justify-content: center;
+            margin-top: 20%;
+            row-gap: 65px;
+        }
 
-    .comment{
-        margin-top: 0px;
-        display: grid;
-        justify-content: center;
-        width: auto;
-        gap: 7vh;
-        margin-left: 5vh;
-    }
+        .comment-mb .square-cmt{
+            border: 2px solid #250902;
+        }
 
-    .square-cmt {
-        margin-top: -30px;
-        border-radius: 15px;
-        width: 260px;
-        height: 102px;
-        background-color: white;
-    }
+        #service-mb{
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            min-height: 65vh;
+            background-color: #250902;
+            width: 90%;
+            margin: 10%;
+        }
 
-    .img-cmt {
-        height: 180px;
-        margin-top: -5vh;
-        margin-left: -7vh;
-        left: 30vh;
-    }
+        .title-service-mb{
+            font-family: "Protest Riot", sans-serif;
+            color: #fffdfd;
+            font-size: 25px;
+        }
 
-    .name {
-        margin-top: -20vh;
-        padding-left: 11vh;
-    }
+        #service-mb button{
+            border: none;
+            border-radius: 10px;
+            width: 50%;
+            height: 30%;
+        }
 
-    .text-comment {
-        font-size: 12px;
-        margin-top: 0vh;
-        margin-left: 13vh;
-    }
-
-    .title-service {
-        font-size: 20px;
-        margin-top: -2rem;
-        margin-left: 12vh;
-    }
-
-    section form {
-        display: flex;
-        flex-direction: column;
-        width: 80%;
-        margin-left: 1vh;
-    }
-
-    .maps{
-        display: none;
-    }
-
-    #footer_content {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 2rem;
-    }
+        .maps-mb{
+            display: block;
+            padding: 10%;
+        }
 }
+
 
 @media screen and (max-width: 426px) {
     #footer_content {
         grid-template-columns: repeat(1, 1fr);
         padding: 3rem 2rem;
+    }
+
+    .wrapper .carousel {
+        grid-auto-columns: 100%;
     }
 }

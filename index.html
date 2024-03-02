@@ -5,43 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="img/x-burger.png" type="image/x-icon">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <title>Burger</title>
 </head>
 <body>
-    <header id="hd">
-        <img src="img-header.png" alt="imagem header" id="img-header">
+    <header id="header">
+        <img src="./img/Img-header.png" alt="imagem header" id="img-hd">
 
-        <img src="/img/mobile.png" alt="Imagem mobile" id="mobile">
+        <a href="#home"><img src="img/logo.png" alt="logo" id="img-logo"></a>
+        
+        <nav id="nav">
+            <button aria-label="Abrir Menu" id="btn-mobile" aria-haspopup="true" aria-controls="menu" aria-expanded="false">Menu
+                <span id="hamburger"></span>
+            </button>
 
-        <img src="img/logo.png" alt="logo" id="img-logo">
-        <nav id="hd-menu">
-            <a class="hd-item" href="#home">HOME</a>
-            <a class="hd-item" href="#container">MENU</a>
-            <a class="hd-item" href="#about">SOBRE</a>
-            <a class="hd-item" href="#service">ATENDIMENTO</a>
-            <div class="hd-menu-btn">   
-                <button class="btn-hd" href="#container">Saiba Mais...</button>
-            </div>
-
-            <div class="mobile-menu-icon">
-                <button onclick="menuShow()"><i class="fa-solid fa-bars" id="icon"></i></button>
-            </div>
-        </nav>
-
-
-        <div class="mobile-menu">
-            <nav>
-                <a class="mb-item" href="#home">HOME</a>
-                <a class="mb-item" href="#container">MENU</a>
-                <a class="mb-item" href="#about">SOBRE</a>
-                <a class="mb-item" href="#service">ATENDIMENTO</a>
-            </nav>
-        </div>
+            <ul id="menu">
+                <a class="hd-item" href="#home">HOME</a>
+                <a class="hd-item" href="#container">MENU</a>
+                <a class="hd-item" href="#about">SOBRE</a>
+                <a class="hd-item" href="#service">ATENDIMENTO</a>
+            </ul>
+          </nav>
     </header>
 
-    <h3 class="title-menu">EXPLORAR MENU</h3>
     <div id="container">
+        <h3 class="title-menu">EXPLORAR MENU</h3>
         <div class="cont-item">
             <div class="square">
                 <img class="img-cheese" src="./img/cheeseburger (2).png" alt="Cheeseburger"> 
@@ -89,6 +78,52 @@
         </div> 
     </div>
 
+    <div class="wrapper">
+        <h3 class="title-menu">EXPLORAR MENU</h3>
+      <ul class="carousel">
+        <li class="card">
+          <div class="img"><img class="img-cheese" src="./img/cheeseburger (2).png" alt="Cheeseburger"></div>
+          <h2>Cheeseburger</h2>
+          <span>R$20,00</span>
+        </li>
+        <li class="card">
+          <div class="img"><img class="img-double" src="./img/doublebeef-burger.png" alt="Doublebeef Burger"></div>
+          <h2>Doublebeef</h2>
+          <span>R$22,50</span>
+        </li>
+        <li class="card">
+          <div class="img"><img class="burguer-modific" src="./img/fishburger.png" alt="Fish Burger"></div>
+          <h2>Fish Burger</h2>
+          <span>R$24,90</span>
+        </li>
+        <li class="card">
+          <div class="img"><img class="img-smash" src="./img/smash-burger.png" alt="Smash Burger"></div>
+          <h2>Smash Burger</h2>
+          <span>R$27,00</span>
+        </li>
+        <li class="card">
+          <div class="img"><img class="img-double" src="./img/cheezy.png" alt="Cheezy Bluster"> </div>
+          <h2>Cheezy Bluster</h2>
+          <span>R$28,00</span>
+        </li>
+        <li class="card">
+          <div class="img"><img class="img-oclock-sh" src="./img/oclock.png" alt="O'Clock Burger"></div>
+          <h2>O'Clock Burger</h2>
+          <span>R$25,50</span>
+        </li>
+        <li class="card">
+          <div class="img"><img class="burguer-modific" src="./img/classic.png" alt="Classic Burger"></div>
+          <h2>Classic Burger</h2>
+          <span>R$18,50</span>
+        </li>
+        <li class="card">
+          <div class="img"><img class="img-smash" src="./img/Super Hero.png" alt="Super Hero"></div>
+          <h2>Super Hero</h2>
+          <span>R$30,00</span>
+        </li>
+      </ul>
+    </div>
+
     <div id="about">
         <h3 id="title-about">SOBRE</h3>
         <img class="img-about" src="./img/img-about.png" alt="Imagem do sobre">
@@ -99,6 +134,12 @@
                 crocantes, garantindo que cada mordida seja uma explosão de sabor e frescor. Nossos pães são assados diariamente para 
                 garantir a textura perfeita e o sabor irresistível. Além disso, estamos empenhados em oferecer opções para todos os gostos e necessidades. Desde opções vegetarianas e veganas até 
                 hambúrgueres clássicos e inovadores, há algo para todos os paladares no Burger.</p>
+
+                <p class="text-about-mobile">Na Burger, estamos comprometidos em proporcionar uma experiência gastronômica única, oferecendo hambúrgueres 
+                    suculentos e autênticos, preparados com ingredientes de alta qualidade. Nossa missão é criar opções deliciosas para todos os 
+                    gostos, incluindo vegetarianos e veganos, garantindo que cada mordida seja uma explosão de sabor e frescor.</p>
+
+            <img class="img-mobile-about" src="./img/burger 3.jpg" alt="">  
 
         <div class="comment">
             <div class="square-cmt">
@@ -117,9 +158,7 @@
                 <p class="text-comment">"Uma experiência gastronômica incrível!.”</p>
             </div>
         </div>
-
-        <hr>
-
+        
         <div id="service">
             <section>
                 <h3 class="title-service">FALE CONOSCO</h3>
@@ -146,6 +185,55 @@
                 0EUA!5e1!3m2!1spt-BR!2sbr!4v1707524007934!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" 
                 loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
+        </div>
+    </div>
+
+    <div class="comment-service-mobile">
+        <div class="comment-mb">
+            <div class="square-cmt">
+                <img class="img-cmt" src="./img/pessoa1.png" alt="O'Clock Burger">
+                <p class="name">Pedro Carvalho</p>
+                <p class="text-comment">“Simplesmente divino! O Burger é minha hamburgueria favorita, e por um bom motivo.”</p>
+            </div>
+            <div class="square-cmt">
+                <img class="img-cmt" src="./img/pessoa2.png" alt="Classic Burger">
+                <p class="name">Jully Silva</p>
+                <p class="text-comment">"Não tenho palavras para descrever o quão deliciosos são os hambúrgueres do Burger.”</p>
+            </div>
+            <div class="square-cmt">
+                <img class="img-cmt" src="./img/pessoa3.png" alt="Super Hero">
+                <p class="name">Lisa Camargo</p>
+                <p class="text-comment">"Uma experiência gastronômica incrível!.”</p>
+            </div>
+        </div>
+        
+        <div id="service-mb">
+            <section>
+                <h3 class="title-service-mb">FALE CONOSCO</h3>
+                <form id="form-service-mb" action="#" method="POST">
+                    <label for="nome">Nome:</label><br>
+                    <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required><br><br>
+                  
+                    <label for="telefone">Telefone:</label><br>
+                    <input type="tel" id="telefone" name="telefone" placeholder="Digite seu telefone" required><br><br>
+                  
+                    <label for="email">Email:</label><br>
+                    <input type="email" id="email" name="email" placeholder="Digite seu email" required><br><br>
+                  
+                    <label for="mensagem">Mensagem:</label><br>
+                    <textarea id="mensagem" name="mensagem" rows="4" placeholder="Digite seu mensagem" required></textarea><br><br>
+    
+                    <button type="submit">Enviar</button>
+                </form>
+
+                <div class="maps-mb">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d51193.994647178326!2d-81.58398875556166!3d27.602818251309834!2m3
+                    !1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88dc558e1b27e857%3A0x1cd2c2bd71103548!2sAvon%20Park%2C%20Fl%C3%B3rida%2033825%2C%2
+                    0EUA!5e1!3m2!1spt-BR!2sbr!4v1707524007934!5m2!1spt-BR!2sbr" width="250" height="400" style="border:0;" allowfullscreen="" 
+                    loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </section>
+
         </div>
     </div>
 
@@ -209,12 +297,11 @@
         </div>
 
         <div id="footer_copyright">
-            &#169
-            2024 all rights reserved
+            &#169 Copyright - 
+            2024
         </div>
     </footer>
-
+    
     <script src="./script.js"></script>
 </body>
-
 </html>
