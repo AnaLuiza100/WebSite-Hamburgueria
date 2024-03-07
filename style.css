@@ -304,8 +304,9 @@ html{
     align-items: center;
     justify-content: flex-start;
     min-height: 65vh;
-    margin: 80px;
+    margin: 100px;
 }
+
 section{
     display: flex;
     align-items: center;
