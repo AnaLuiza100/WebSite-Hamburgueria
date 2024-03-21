@@ -1,3 +1,5 @@
+// Menu
+
 const btnMobile = document.getElementById('btn-mobile');
 
 function toggleMenu(event) {
@@ -16,6 +18,7 @@ function toggleMenu(event) {
 btnMobile.addEventListener('click', toggleMenu);
 btnMobile.addEventListener('touchstart', toggleMenu);
 
+// Carrossel
 const wrapper = document.querySelector(".wrapper");
 const carousel = document.querySelector(".carousel");
 const firstCardWidth = carousel.querySelector(".card").offsetWidth;

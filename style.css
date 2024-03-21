@@ -18,126 +18,85 @@ html{
     scroll-behavior: smooth;
 }
 
-#header {
-    position: relative;
-    display: flex;
-    align-items: center;
-    box-sizing: border-box;
-    justify-content: space-between;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
+/* Elementos para versão mobile */
+
+#btn-mobile, .mobile-menu-icon, .mobile-menu, .wrapper, .img-sobre-mb,.comment-service-mobile, #texto-mobile, .img-sobre-mobile{
+    display: none;
 }
 
-#img-hd {
+/* Estilização do menu */
+
+#menu {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+#img-menu {
     width: 100%;
     height: auto;
 }
 
-#btn-mobile {
-    display: none;
-}
-
-#menu{
-    display: flex;
-    list-style: none;
-    gap: .5rem;
-}
-
-#nav {
-    position: absolute;
-    right: 0;
-    padding: 1.5rem;
-}
-
-#menu .hd-item{
-    display: block;
-}
-
 #img-logo {
     position: absolute;
-    top: 20px;
-    left: 80px;
-    width: 17%;
+    width: 20%;
+    margin-left: -95%;
+    margin-top: 5px;
+    z-index: 1;
 }
 
-#logo-mobile{
-    display: none;
+#nav{
+    position: relative;
+    margin-left: -600px;
+    padding: 25px;
 }
 
-#menu-lateral{
-    display: none;
+#nav-ul {
+    display: flex;
+    list-style: none;
+    gap: 0.5rem;
 }
 
-.hd-item {
-    font-size: 20px;
-    margin-left: 20px;
+#nav-ul a {
+    display: block;
+    padding: 0.5rem;
     text-decoration: none;
-    color: rgb(255, 255, 255);
-}
-
-.hd-item:hover {
-    font-weight: 600;
     color: white;
+    font-size: 20px;
 }
 
-.hd-menu-btn {
-    position: absolute;
-    top: 540px;
-    left: -940px;
+#nav-ul a:hover {
+    font-weight: 700;
 }
 
-.hd-menu-btn button {
-    background-color: white;
-    color: #250902;
-    width: 180px;
-    height: 60px;
-    border: none;
-    box-shadow: 4px 5px 4px rgb(0, 0, 0, 0.25);
-    border-radius: 20px;
-    font-weight: 800;
-}
 
-.hd-menu-btn button:hover {
-    color: white;
-    background-color: #250902;
-}
+/* Pagina do cardapio */
 
-.mobile-menu-icon {
-    display: none;
-}
-
-.mobile-menu {
-    display: none;
-}
-
-.wrapper{
-    display: none;
-}
-
-.title-menu {
-    font-family: "Protest Riot", sans-serif;
-    text-align: center;
-    color: #250902;
-    margin-top: 20px;
-    font-size: 25px;
-}
-
-#container {
+#cardapio {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    margin: 40px;
-}
-
-
-.cont-item {
-    margin-top: 50px;
-    display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    width: 80%;
-    gap: 50px;
+    gap: 20px; 
+}
+
+#grupo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 50%;
+    padding: 90px 0px 50px;
+    row-gap: 30px;
+    gap: 30px;
+}
+
+.titulo-menu {
+    font-family: "Protest Riot", sans-serif;
+    color: #250902;
+    font-size: 25px;
+    text-align: center;
+    margin-top: 15px;
+    position: absolute;
 }
 
 .square {
@@ -145,256 +104,154 @@ html{
     width: 140px;
     height: 190px;
     background-color: #250902;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
 
-.img-cheese{
+.hamburguer-img{
     width: auto;
-    height: 100px;
     display: flex;
     justify-content: center;
 }
 
-.img-double{
-    width: auto;
-    height: 88px;
-    display: flex;
-    justify-content: center;
-    margin-top: 8px;
-    margin-left: 15px;
-}
-
-.img-fish{
-    width: auto;
-    height: 78px;
-    display: flex;
-    justify-content: center;
-    margin-top: 8px;
-    margin-left: 12px;
-}
-
-.img-smash{
-    width: auto;
-    height: 88px;
-    display: flex;
-    justify-content: center;
-    margin-top: 8px;
-    margin-left: 16px;
-}
-
-.img-oclock-sh{
-    width: auto;
-    height: 95px;
-    display: flex;
-    justify-content: center;
-    margin-top: 1px;
-    margin-left: 22px;
-}
-
-.title-name-standard{
-    margin-top: 15px;
-    display: flex;
-    justify-content: center;
+.nome-hamburguer{
     color: white;
 }
 
-.title-name-fish{
-    margin-top: 24px;
-    display: flex;
-    justify-content: center;
+.preco{
     color: white;
+    margin-top: -10px;
 }
 
-.title-name-cheese{
-    margin-top: 12px;
-    display: flex;
-    justify-content: center;
-    color: white;
-}
 
-.cheap{
-    margin-top: 10px;
-    display: flex;
-    justify-content: center;
-    color: white;
-    font-weight: 700;
-}
+/* Pagina do sobre */
 
-#about {
+#sobre {
     background-color: #250902;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
+    flex-direction: row;
 }
 
-#title-about {
+#titulo-sobre {
     font-family: "Protest Riot", sans-serif;
     color: white;
-    text-align: center;
-    font-size: 25px;
-    padding: 12px;
+    position: relative;
+    left: 750px;
+    margin-top: 5px;
 }
 
-.img-about {
-    width: auto;
+#img-sobre{
+    width: 25%;
     height: 500px;
-    margin-right: 150vh;
 }
 
-
-.text-about {
+#texto{
     color: #fffdfd;
-    text-align: justify; /* Justifica o texto */
+    text-align: justify;
     font-size: 18px;
     text-indent: 30px;
+    margin-top: 80px;
     justify-content: center;
-    margin-top: -500px;
-    margin-left: 400px;
-    padding: 20px;
+    padding: 2%;
 }
 
-.text-about-mobile{
-    display: none;
-}
-
-.img-mobile-about{
-    display: none;
-}
-
-.comment {
-    margin-top: 50px;
-    margin-left: 35vh;
+#comentarios {
+    background-color: #250902;
     display: flex;
     justify-content: center;
-    width: auto;
-    gap: 80px;
 }
 
-.square-cmt {
-    margin-top: -30px;
-    border-radius: 15px;
-    width: 195px;
-    height: 220px;
+.square-cmt{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
     background-color: white;
-}
-
-.img-cmt{
-    width: auto;
-    height: 180px;
-    display: flex;
-    justify-content: center;
-    margin-top: -33px;
-}
-
-.name{
-    margin-top: -50px;
-    display: flex;
-    justify-content: center;
-    color: rgb(0, 0, 0);
-}
-
-.text-comment{
-    font-size: 13px;
-    margin-top: 6px;
-    margin-left: 10px;
-}
-
-#service{
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    min-height: 65vh;
-    margin: 80px;
-}
-
-section{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+    border-radius: 15px;
     padding: 10px;
-    width: 500px;
+    width: 17%;
 }
 
-.title-service{
+.square-cmt img {
+    width: 100%; 
+    margin-top: -40px;
+}
+
+.comentario p {
+    color: white;
+    text-align: center;
+}
+
+.img-sobre-mb {
+    display: none; /* Esconde a imagem para dispositivos móveis */
+}
+
+
+/* Formulario do contato */
+#contato{
+    background-color: #250902;
+    display: grid;
+    gap: 3em;
+    grid-template-columns: 1fr 1fr;
+}
+
+#titulo-contato{
     font-family: "Protest Riot", sans-serif;
-    color: #fffdfd;
-    font-size: 25px;
-    margin: 2rem;
-    margin-top: -1rem;
-    margin-left: -55vh;
-    width: 200px; /* Defina a largura da logo conforme necessário */
-    height: auto; /* Mantenha a proporção da imagem */
+    color: white;
+    text-align: left;
 }
 
-#service section form{
+form{
     display: flex;
     flex-direction: column;
-    width: 100%;
-    margin-left: -30vh;
+    text-align: center;
+    margin-top: 5em;
+    margin-left: 35px;
 }
 
-form label{
+.input{
+    width: 95%;
+    max-width: 700px;
+    font-size: .9rem;
+    padding: 1em;
+    outline: none;
+    background-color: var(--formBg);
+    border-radius: 10px;
+    border: 1px solid rgb(255, 255, 255);
+    margin-bottom: 1em;
     color: #fffdfd;
-    font-size: 17px;
-    margin-bottom: -15px;
+
 }
 
-form input{
-    padding: 10px;
-    outline: none;
-    border: none;
-    font-size: 15px;
-    transition: all 0.5s;
+.input::placeholder{
+    color: #fffdfd;
+    text-transform: capitalize;
 }
 
-form input:focus{
-    border-radius: 16px;
-}
-
-form textarea{
-    padding: 10px;
-    outline: none;
-    font-size: 15px;
-    border: none;
-    transition: all 0.5s;
-}
-form textarea:focus{
-    border-radius: 16px;
-}
-#service form button{
-    padding: 15px;
-    cursor: pointer;
-    font-size: 16px;
-    background: transparent;
-    transition: all 1s;
-    background-color: #fffdfd;
+.submit{
+    border-radius: 10px;
     color: #250902;
-}
-#service form button:hover{
-    border-radius: 16px;
-}
-
-hr {
-    width: 80%; /* Defina a largura da linha */
-    margin: 0 auto; /* Centraliza a linha horizontalmente */
-    border: none; /* Remove a borda padrão */
-    border-top: 1px solid white; 
+    font-weight: bold;
+    cursor: pointer;
+    width: 47%;
+    padding: 10px;
+    margin-bottom: 50px;
 }
 
-.maps{
-    display: flex;
-    margin-top: 4.5rem;
+.submit:hover{
+    color: #ffffff;
+    background-color: #250902;
 }
 
-.comment-service-mobile{
-    display: none;
+#mapa{
+    margin: auto;
 }
 
-
+/* Estilização roda pé */
 footer {
     width: 100%;
-    color: var(--color-neutral-40);
 }
 
 #img-logo-dark{
@@ -518,99 +375,112 @@ footer {
 }  
 
 @media screen and (max-width: 1180px) {
-    #img-hd {
-        display: none;
-    }
-    #img-logo {
-        display: block;
-        width: 6.5rem;
-        margin: -10px;
-    }
-
-    #header{
-        height: 70px;
-        background: #250902;
-    }
-
-    #btn-mobile {
-        display: flex;
-        font-size: 1rem;
-        border: none;
-        background: none;
-        cursor: pointer;
-        gap: 0.5rem;
-        color: #e7e7e7;
-    }
-
-    #menu {
-        display: block;
-        position: absolute;
-        width: 200%;
-        top: 70px;
-        right: 0px;
-        background: #250902;
-        transition: 0.6s;
-        z-index: 1000;
-        height: 0px;
-        visibility: hidden;
-        overflow-y: hidden;
-    }
-
-    #nav.active #menu {
-        height: calc(50vh - 70px);
-        visibility: visible;
-        overflow-y: auto;
-    }
-
-    #menu a {
-        padding: 1rem 0;
-        margin: 0 1rem;
-        border-bottom: 2px solid rgba(0, 0, 0, 0.05);
-    }
-
-    #hamburger {
-        border-top: 2px solid;
-        width: 20px;
-    }
-
-    #hamburger::after,
-    #hamburger::before {
-        content: '';
-        display: block;
-        width: 20px;
-        height: 2px;
-        background: currentColor;
-        margin-top: 5px;
-        transition: 0.3s;
-        position: relative;
-    }
-
-    #nav.active #hamburger {
-        border-top-color: transparent;
-    }
-
-    #nav.active #hamburger::before {
-        transform: rotate(135deg);
-    }
-
-    #nav.active #hamburger::after {
-        transform: rotate(-135deg);
-        top: -7px;
-    }
-
-    #container{
+ 
+    #img-menu, #cardapio, #img-sobre, #texto{
         display: none;
     }
 
-    .wrapper {
-        display: block;
+/*     
+    form{
         max-width: 1100px;
-        width: 100%;
-        position: relative;
-        padding: 35px;
+    }   */
+
+/* menu */
+
+#menu {
+    background-color: #250902;
+    height: 50px;
+    width: 100%;
+}
+
+#img-logo{
+    position: absolute;
+    width: 20%;
+    margin-left: 15px;
+    margin-top: 7px;
+}
+
+#nav-ul {
+    display: block;
+    position: absolute;
+    width: 244%;
+    top: 50px;
+    right: 0px;
+    background: #250908;
+    transition: 0.6s;
+    z-index: 1000;
+    height: 0px;
+    visibility: hidden;
+    overflow-y: hidden;
+}
+
+  #nav.active #nav-ul {
+    height: calc(50vh - 70px);
+    visibility: visible;
+    overflow-y: auto;
+  }
+  #nav-ul a {
+    padding: 1rem 0;
+    margin: 0 1rem;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.05);
+  }
+  #btn-mobile {
+
+    display: flex;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border: none;
+    background: none;
+    cursor: pointer;
+    gap: 0.5rem;
+  }
+
+  #hamburger {
+    color: white;
+    border-top: 2px solid;
+    width: 20px;
+    position: relative;
+    top: -15px;
+  }
+
+  #hamburger::after,
+  #hamburger::before {
+    content: '';
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: currentColor;
+    margin-top: 5px;
+    transition: 0.3s;
+    position: relative;
+  }
+  #nav.active #hamburger {
+    border-top-color: transparent;
+  }
+  #nav.active #hamburger::before {
+    transform: rotate(135deg);
+  }
+  #nav.active #hamburger::after {
+    transform: rotate(-135deg);
+    top: -7px;
+  }
+
+
+    
+ /* Carrossel */
+    .wrapper {
+        display: flex;
+        max-width: 1100px;
+        padding: 12px;
+        padding-top: 60px;
     }
 
-    .wrapper .carousel {
+    .titulo-menu{
+        margin-top: -40px;
+        margin-left: 65px;
+    }
+
+    .wrapper .carrossel {
         display: grid;
         grid-auto-flow: column;
         grid-auto-columns: calc((100% / 2) - 1px);
@@ -622,28 +492,28 @@ footer {
         scrollbar-width: none;
         }
 
-        .carousel::-webkit-scrollbar {
+        .carrossel::-webkit-scrollbar {
             display: none;
         }
-        .carousel.no-transition {
+        .carrossel.no-transition {
             scroll-behavior: auto;
         }
-        .carousel.dragging {
+        .carrossel.dragging {
             scroll-snap-type: none;
             scroll-behavior: auto;
         }
-        .carousel.dragging .card {
+        .carrossel.dragging .card {
             cursor: grab;
             user-select: none;
         }
-        .carousel :where(.card, .img) {
+        .carrossel :where(.card, .img) {
             display: flex;
             justify-content: center;
             align-items: center;
         }
-        .carousel .card {
+        .carrossel .card {
             scroll-snap-align: start;
-            height: 342px;
+            height: 300px;
             list-style: none;
             background: #250902;
             cursor: pointer;
@@ -662,102 +532,85 @@ footer {
             object-fit: cover;
         }
 
-        .carousel .card h2 {
+        .carrossel .card h2 {
             font-weight: 500;
             font-size: 1.56rem;
             margin: 30px 0 5px;
             color: #e7e7e7;
+            text-align: center;
         }
-        .carousel .card span {
+        .carrossel .card span {
             color: white;
             font-size: 1.31rem;
         }
 
-        .img-about{
-            display: none;
+
+
+        /* Sobre */
+
+        #sobre{
+            display: flex;
+            flex-direction: column;
         }
 
-
-        .text-about{
-             display: none;
+        #titulo-sobre{
+            text-align: center;
+            position: static;
         }
 
-        .text-about-mobile{
+        #texto-mobile{
             display: block;
-            padding: 5%;
-            font-size: 15px;
+            padding: 11%;
+            font-size: 16px;
             margin-top: 0;
-            margin-left: 0; 
+            margin-left: -11px;
             color: #fffdfd;
             text-indent: 30px;
             justify-content: center;
+            text-align: justify;
         }
 
-        .img-mobile-about{
+        .img-sobre-mobile{
             display: block;
-            width: 80%;
-            padding: 3%;
+            width: 95%;
+            padding: 7%;
+            margin-top: -40px;
         }
 
-        .comment{
-            display: none;
-        }
 
-        #service{
-            display: none;
-        }
 
-        .maps{
-            display: none;
-        }
-
-        .comment-service-mobile{
+        /* Comentario */
+        #comentarios{
+            background-color: white;
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: flex-start;
         }
 
-        .comment-mb {
-            /* top: 5%; */
+        .square-cmt{
+            border: 3px solid #250908;
+            width: 55%;
+        }
+
+        /* contato */
+        #contato{
             display: flex;
-            flex-wrap: wrap;
             flex-direction: column;
-            justify-content: center;
-            margin-top: 20%;
-            row-gap: 65px;
         }
 
-        .comment-mb .square-cmt{
-            border: 2px solid #250902;
+        form{
+            margin-top: 2em;
+            margin-left: 20px;
         }
 
-        #service-mb{
-            display: flex;
-            align-items: center;
-            justify-content: flex-start;
-            min-height: 65vh;
-            background-color: #250902;
+        .input{
             width: 90%;
-            margin: 10%;
         }
 
-        .title-service-mb{
-            font-family: "Protest Riot", sans-serif;
-            color: #fffdfd;
-            font-size: 25px;
-        }
-
-        #service-mb button{
-            border: none;
-            border-radius: 10px;
-            width: 50%;
-            height: 30%;
-        }
-
-        .maps-mb{
-            display: block;
-            padding: 10%;
+        #mapa iframe{
+            width: 100%;
+            padding: 20px;
+            margin-top: -85px;
         }
 }
 
