@@ -1,3 +1,6 @@
+//Animação
+AOS.init();
+
 // Menu
 
 const btnMobile = document.getElementById('btn-mobile');
